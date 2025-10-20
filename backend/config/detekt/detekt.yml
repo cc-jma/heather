@@ -1,0 +1,9 @@
+formatting:
+  TrailingCommaOnCallSite:
+    active: true
+  TrailingCommaOnDeclarationSite:
+    active: true
+
+style:
+  MagicNumber:
+    active: false
