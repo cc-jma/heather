@@ -1,9 +1,12 @@
 ## Goal
-Pique interest for AI-Driven. Let it be productive, fun and interesting.
+- Pique interest for AI-Driven development.
+- Experience it as productive, fun and interesting.
+- Increase skills with claude code.
+- Find applications in current project: better ways of getting things done with AI.
 
 ## Metrics:
-- users work with AI support tomorrow
-- users increasingly work with AI support, exchange tips, influence others
+- Participants work with AI support tomorrow
+- Participants increasingly work with AI support, exchange tips, influence others
 
 ## Setup:
 - clone https://github.com/fletchgqc/heather
@@ -60,13 +63,13 @@ Pique interest for AI-Driven. Let it be productive, fun and interesting.
 1. Have claude add a dependency to build.gradle.
 2. Manually check whether it's the latest release (it won't be).
 3. Remove the dependency.
-4. Add this MCP server https://github.com/arvindand/maven-tools-mcp (both claude code and the README have documentation to help you).
+4. Add this MCP server https://github.com/arvindand/maven-tools-mcp (both claude code and the README have documentation to help you). This relies on docker and won't work in agentbox.
 5. Now when claude code adds the dependency, it should be the latest version.
 
 ## Hooks:
 - Write a hook which runs the linter every time a file is written/edited. (See claude code doco for help)
 	- What are the pros/cons?
-	- What other options are available
+	- What other options are available?
 
 ## Other Ideas:
 - Anytime you have corrected claude code once or twice, try running `/learn`
@@ -84,16 +87,16 @@ Keep work out of context, only reporting results. Same concept as here with tool
 
 > when I ask a question and claude code uses the webfetch tool, does all the fetched web page end up in the main context? 
 
-● No, the full fetched web page does not end up in the main context.
+> No, the full fetched web page does not end up in the main context.
 
-  Based on the WebFetch tool description, here's how it works:
+>  Based on the WebFetch tool description, here's how it works:
 
-  1. WebFetch fetches the URL content and converts HTML to markdown
-  2. It then processes the content with a prompt using a small, fast model (not me, the main Sonnet model)
-  3. Only the model's response about the content gets returned to the main context
+>  1. WebFetch fetches the URL content and converts HTML to markdown
+>  2. It then processes the content with a prompt using a small, fast model (not me, the main Sonnet model)
+> 3. Only the model's response about the content gets returned to the main context
 
-  So WebFetch acts as a filter - it uses a separate lightweight model to extract and summarize the relevant information based on the prompt, and only that processed
-  response enters the main context. This prevents large web pages from consuming excessive context tokens.
+>  So WebFetch acts as a filter - it uses a separate lightweight model to extract and summarize the relevant information based on the prompt, and only that processed
+response enters the main context. This prevents large web pages from consuming excessive context tokens.
 
-  For example, if I use WebFetch to get information from a large documentation page, the entire HTML/markdown of that page doesn't get loaded into my context.
+>  For example, if I use WebFetch to get information from a large documentation page, the entire HTML/markdown of that page doesn't get loaded into my context.
   Instead, only the smaller model's answer to my specific query about that page gets returned to me.
