@@ -58,11 +58,14 @@ Sick of approving permission dialogs? Start claude in full agentic mode; use one
 2. Execute `git status` command from inside claude:
 	1. Must run in < 1 second.
 	2. No quitting claude.
-3. Set up claude to always show your current git branch
-4. Add "after every response, run the /learn command" to CLAUDE.md from within claude.
-5. Sick of CTRL-o? Configure verbose output.
-6. Display an ascii-art representation of your current context.
-7. Run claude as a single-use command: `claude --dangerously-skip-permissions -p "your prompt here"`
+3. Stop claude code (ctrl-c).
+	1. Start it again, continuing your current session, in one command.
+	2. Without stopping claude, load and continue a previous session.
+4. Set up claude to always show your current git branch
+5. Add "after every response, run the /learn command" to CLAUDE.md from within claude.
+6. Sick of CTRL-o? Configure verbose output.
+7. Display an ascii-art representation of your current context.
+8. Run claude as a single-use command: `claude --dangerously-skip-permissions -p "your prompt here"`
 
 ## MCP
 1. Have claude add a dependency to build.gradle.
