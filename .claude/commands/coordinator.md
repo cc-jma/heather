@@ -20,7 +20,7 @@ Steps to follow:
 **If multiple files:**
 - IMPORTANT: Launch Task agents SERIALLY, one at a time. Wait for each agent to complete before launching the next. DO NOT launch agents in parallel as they will conflict when manipulating git branches.
 - For each file path (processing one at a time), launch a Task agent with subagent_type="general-purpose" and this prompt:
-  "You are processing the class file at {full_path}. Extract the class name from the path. Ensure you're on the main branch with a clean working directory. Create a new git branch named {ClassName}. Then sequentially: (1) Launch a Task agent with the prompt: 'Read the instructions in /workspace/.claude/agents/class-to-md-agent.md and follow them to process the class file at {full_path}'. Commit with 'agent class-to-md finished'. (2) Launch a Task agent with the prompt: 'Read the instructions in /workspace/.claude/agents/hello-agent.md and follow them to process the class file at {full_path}'. Commit with 'agent write-hello finished'. (3) Launch a Task agent with the prompt: 'Read the instructions in /workspace/.claude/agents/world-agent.md and follow them to process the class file at {full_path}'. Commit with 'agent write-world finished'. Return to main branch and report the branch name and commits created."
+  "You are processing the class file at {full_path}. Extract the class name from the path. Ensure you're on the main branch with a clean working directory. Create a new git branch named {ClassName}. Then sequentially: (1) Launch a Task agent with the prompt: 'Read the instructions in /workspace/.claude/workflows/class-to-md-agent.md and follow them to process the class file at {full_path}'. Commit with 'agent class-to-md finished'. (2) Launch a Task agent with the prompt: 'Read the instructions in /workspace/.claude/workflows/hello-agent.md and follow them to process the class file at {full_path}'. Commit with 'agent write-hello finished'. (3) Launch a Task agent with the prompt: 'Read the instructions in /workspace/.claude/workflows/world-agent.md and follow them to process the class file at {full_path}'. Commit with 'agent write-world finished'. Return to main branch and report the branch name and commits created."
 - After all agents have completed, report summary of all processing
 
 **If single file:**
@@ -29,15 +29,15 @@ Steps to follow:
 2. Create a new git branch with the class name: `git checkout -b {ClassName}`
 3. Launch class-to-md agent using Task tool:
    - subagent_type: "general-purpose"
-   - prompt: "Read the instructions in /workspace/.claude/agents/class-to-md-agent.md and follow them to process the class file at {full_path}"
+   - prompt: "Read the instructions in /workspace/.claude/workflows/class-to-md-agent.md and follow them to process the class file at {full_path}"
 4. Commit the results: `git add . && git commit -m "agent class-to-md finished"`
 5. Launch hello agent using Task tool:
    - subagent_type: "general-purpose"
-   - prompt: "Read the instructions in /workspace/.claude/agents/hello-agent.md and follow them to process the class file at {full_path}"
+   - prompt: "Read the instructions in /workspace/.claude/workflows/hello-agent.md and follow them to process the class file at {full_path}"
 6. Commit the results: `git add . && git commit -m "agent write-hello finished"`
 7. Launch world agent using Task tool:
    - subagent_type: "general-purpose"
-   - prompt: "Read the instructions in /workspace/.claude/agents/world-agent.md and follow them to process the class file at {full_path}"
+   - prompt: "Read the instructions in /workspace/.claude/workflows/world-agent.md and follow them to process the class file at {full_path}"
 8. Commit the results: `git add . && git commit -m "agent write-world finished"`
 9. Return to main branch: `git checkout main`
 10. Respond with a summary of the branch created and commits made.
