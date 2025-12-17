@@ -1,78 +1,28 @@
-import React, { useState } from 'react'
 import './App.css'
+import { WeatherDisplay } from './components/WeatherDisplay'
+import { ForecastList } from './components/ForecastList'
+import { AgeCalculator } from './components/AgeCalculator'
+import { useWeather } from './hooks/useWeather'
 
 function App() {
-  const [birthdate, setBirthdate] = useState('')
-  const [age, setAge] = useState<number | null>(null)
-  const [error, setError] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-
-  const calculateAge = async () => {
-    if (!birthdate) {
-      setError('Please enter a birthdate')
-      return
-    }
-
-    setLoading(true)
-    setError(null)
-
-    try {
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || ''
-      const response = await fetch(`${apiBaseUrl}/api/age?birthdate=${birthdate}`)
-      const data = await response.json()
-
-      if (!response.ok) {
-        setError(data.error || 'Failed to calculate age')
-        setAge(null)
-      } else {
-        setAge(data.age)
-        setError(null)
-      }
-    } catch {
-      setError('Failed to connect to backend')
-      setAge(null)
-    } finally {
-      setLoading(false)
-    }
-  }
+  const { data: weatherData, isLoading, error } = useWeather()
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello World - Technical Walking Skeleton</h1>
-        <p>This is a minimal application demonstrating frontend-backend integration.</p>
+        <h1>Weather Forecast</h1>
 
-        <div className="age-calculator">
-          <h2>Age Calculator</h2>
-          <div className="form-group">
-            <label htmlFor="birthdate">Enter your birthdate:</label>
-            <input
-              id="birthdate"
-              type="date"
-              value={birthdate}
-              onChange={(e) => setBirthdate(e.target.value)}
-              max={new Date().toISOString().split('T')[0]}
-            />
-          </div>
+        <WeatherDisplay
+          weather={weatherData?.current}
+          isLoading={isLoading}
+          error={error}
+        />
 
-          <button onClick={calculateAge} disabled={loading || !birthdate}>
-            {loading ? 'Calculating...' : 'Calculate Age'}
-          </button>
+        {!isLoading && !error && <ForecastList forecast={weatherData?.forecast} />}
 
-          {age !== null && (
-            <div className="result success">
-              <p>
-                Your age is: <strong>{age} years</strong>
-              </p>
-            </div>
-          )}
+        <div className="section-divider" />
 
-          {error && (
-            <div className="result error">
-              <p>Error: {error}</p>
-            </div>
-          )}
-        </div>
+        <AgeCalculator />
       </header>
     </div>
   )

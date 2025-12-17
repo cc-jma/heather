@@ -115,3 +115,132 @@ button:disabled {
 .result strong {
   font-weight: 700;
 }
+
+/* Weather Display Styles */
+.weather-display {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.weather-display h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.weather-display.loading,
+.weather-display.error {
+  text-align: center;
+}
+
+.weather-display.error p {
+  color: #721c24;
+  margin: 0;
+}
+
+.weather-display.error .error-detail {
+  font-size: 0.9rem;
+  color: #856404;
+  margin-top: 8px;
+}
+
+.weather-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.weather-emoji {
+  font-size: 4rem;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.weather-info .temperature {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.weather-info .condition {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Forecast List Styles */
+.forecast-list {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.forecast-list h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.forecast-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.forecast-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.forecast-date {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.forecast-emoji {
+  font-size: 1.5rem;
+}
+
+.forecast-temps {
+  display: flex;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.forecast-temps .temp-high {
+  color: #dc3545;
+}
+
+.forecast-temps .temp-low {
+  color: #007bff;
+}
+
+.forecast-condition {
+  color: #6c757d;
+  text-align: right;
+}
+
+/* Section Divider */
+.section-divider {
+  width: 100%;
+  max-width: 500px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #dee2e6, transparent);
+  margin: 20px 0;
+}
