@@ -1,29 +1,40 @@
 # Workflows
+This is a collection of inspirational ideas to get you thinking of what might help in your project.
 
-## Demo
-- Posting reviews to GitHub with code suggestions.
+## GitHub OSS interaction
+- Let interact with GitHub / GitLab for you. [Authentication tips](https://github.com/fletchgqc/agentbox?tab=readme-ov-file#authenticating-to-git-or-other-scc-providers).
 
-### LLM as a judge
-- Try the `/recursive-review` command.
-
-### Simultaneous agents
-- git worktree
-- clone your project twice
-- background agents - cursor, claude
-
-### Pipeline-fixer
+## Pipeline-fixer
 Sick of waiting for pipelines to fail and put error into LLM? Prompt successfully used by Christoph Muth.
 > “I’m currently always getting an ‘OOMKilled’ error in the GitLab pipeline. Can you use glab to read the logs, fix it, push the changes, and repeat that until it’s fixed?” (I had previously set up glab on my machine via a GitLab access token.)
 > He then also immediately wanted to fix other things as well, but if necessary you can always revert those yourself later.
 
+## Simultaneous agents
+- git worktree
+- Clone your project twice
+- Background agents - cursor, claude
 
-- Throwaway code (Felix's change).
-- Playwright MCP
+## LLM as a judge
+- Try the `/recursive-review` command.
+- Putting it together: spin up multiple implementations and then automatically compare them and select the best.
+
+## Business Empowerment
+- Identify new workflows:
+    - PO-dev pairing prototyping refinement.
+    - Build a pipeline which allows the PO to prompt something and it to be deployed to a dev environment without help.
+    - Offer templated PO-prompts?
+    - How can you give the PO more power to get feedback himself?
+    - Professional vibe coding?
+
+## Deterministic steps
+- Use hooks (claude code) or plugins (opencode) to deterministically ensure certain things run at certain times.
+
+## Other
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) for LLM-powered frontend tests.
+
+## Brainstorming ideas
+- Throwaway code (Felix's change to Agentbox - prompts to allow us to produce own extensions).
+- Who needs POs? Why not just let the LLM create issues based on metrics?
+
+## Reading
 - https://code.claude.com/docs/en/common-workflows
-
-- Show DIY spec creation
-- Show SpecKit Video
-
-## Exercises and ideas
-- PO-dev pairing prototyping refinement
-- Give the PO power!
