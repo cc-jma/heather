@@ -8,6 +8,8 @@
     - For example, Obsidian with LLM plugin.
 - Try BMAD, the product part.
 
+- Post-agile changes due to AI engineering according to McKinsey https://www.youtube.com/watch?v=SZStlIhyTCY
+
 Some ideas...
 ## Linked-in Post by Benedikt Stemmildt
  

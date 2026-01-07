@@ -30,6 +30,7 @@ Sick of waiting for pipelines to fail and put error into LLM? Prompt successfull
 - Use hooks (claude code) or plugins (opencode) to deterministically ensure certain things run at certain times.
 
 ## Other
+- [Augmented coding patterns](https://lexler.github.io/augmented-coding-patterns/)
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) for LLM-powered frontend tests.
 - AI is great for resolving merge conflicts.
 - What prompts should you share and maintain as a team? Create slash-commands.

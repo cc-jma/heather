@@ -2,11 +2,9 @@
 
 ## Demo
 - *Start voice recording!*
-Mention Kilo Code. Mention GitHub Copilot, Copilot CLI, Portkey/Claude, OpenCode, Confluence page. Models, agentbox. Local LLMs.
 - Can you use AI in your project?
 - Try different models. Check usage in Portkey. GitHub hack.
-- Efficiency / YOLO. Play with permissions.
-- Try some code changes, with code review.
+- Try some code changes?
 - *End voice recording, summarise*
 
 ## This Repo
@@ -23,6 +21,10 @@ Mention Kilo Code. Mention GitHub Copilot, Copilot CLI, Portkey/Claude, OpenCode
 - Portkey -> Claude
 - Can't live without UI -> KiloCode.
 - Claude code has IDE integration plugins now too. I don't use them, but you might want to.
+
+## Local LLM
+- Only if you have to.
+- Try LM Studio or ollama. Model? Qwen coder 30b is good.
 
 ## Enable efficient work with full agentic mode
 Sick of approving permission dialogs? Always give the Agent full permissions. Having to approve actions is painfully inefficient. Worried about security? Some container-based solutions:
