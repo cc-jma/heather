@@ -1,11 +1,20 @@
-Most teams spend 90 minutes per sprint in refinement.
+# Product and Agile
 
-We spend 20.
+- Compile who has tried AI for what and what experiences they had with it.
+- Research good use cases for AI in product work using AI
+    - select three cases and try them out.
+- Set up Claude code for everyday use.
+- Set up AI-integration for your local tools.
+    - For example, Obsidian with LLM plugin.
+- Try BMAD, the product part.
 
+Some ideas...
+## Linked-in Post by Benedikt Stemmildt
+ 
+Most teams spend 90 minutes per sprint in refinement. We spend 20.
 The difference? We moved 90% of the work to before anyone sits down.
 
 𝗧𝗵𝗲 𝗣𝗿𝗼𝗯𝗹𝗲𝗺:
-
 Refinement meetings exist to clarify requirements, surface blockers, and align the team.
 
 But most of that work doesn't need a meeting. It needs context.

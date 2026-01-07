@@ -7,9 +7,13 @@ Mention Kilo Code. Mention GitHub Copilot, Copilot CLI, Portkey/Claude, OpenCode
 - Try different models. Check usage in Portkey. GitHub hack.
 - Efficiency / YOLO. Play with permissions.
 - Try some code changes, with code review.
-- Voice Coding
-- Try out 3 different slash commands / Opencode ctrl-x, ctrl-p.
 - *End voice recording, summarise*
+
+## This Repo
+- clone https://github.com/fletchgqc/heather
+- `/install`
+- Outside agentic tool: `scripts/start-all.sh`
+- Visit http://localhost:5173/
 
 ## General Advice
 - Everything you need to know is here: https://confluence.codecentric.de/spaces/AIE/pages/312019402/Enablement+f%C3%BCr+KI-gest%C3%BCtzte+Entwicklung
@@ -17,15 +21,23 @@ Mention Kilo Code. Mention GitHub Copilot, Copilot CLI, Portkey/Claude, OpenCode
 ## Setup Coding Tool
 - Copilot -> Copilot CLI, OpenCode
 - Portkey -> Claude
-- Can't live without UI -> KiloCode
+- Can't live without UI -> KiloCode.
+- Claude code has IDE integration plugins now too. I don't use them, but you might want to.
 
-## Enable efficiency with YOLO mode
-Always give the Agent full permissions. Having to approve actions is painfully inefficient. Worried about security? Some solutions:
-- https://github.com/fletchgqc/agentbox - supports Claude and opencode, add your own tool.
-- https://github.com/marcoemrich/ai_powered_development_devcontainer - Cursor devcontainer, from Marco Emrich.
+## Enable efficient work with full agentic mode
+Sick of approving permission dialogs? Always give the Agent full permissions. Having to approve actions is painfully inefficient. Worried about security? Some container-based solutions:
+
+- with agentbox:
+	- clone https://github.com/fletchgqc/agentbox
+	- create shell alias `ab` to agentbox executable
+	- in heather directory: `ab`
+- as a devcontainer:
+	- open the project in your IDE. It should prompt you to "open as devcontainer". If not, an internet search for IDE doco should help.
+- https://github.com/marcoemrich/ai_powered_development_devcontainer - Cursor devcontainer, from Marco Emrich. Otherwise try Devcontainers in general.
 - https://code.claude.com/docs/en/sandboxing
 - Search for your tool and "sandbox" or "docker" - someone will have created an OSS repo.
-- Devcontainers in general.
+- simple and hey, YOLO (carries certain risk):
+	- in heather directory: `claude --dangerously-skip-permissions`
 
 ## Voice Coding
 - 3x faster input.

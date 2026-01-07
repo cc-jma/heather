@@ -54,5 +54,5 @@ Try stuff like:
 ### Try a framework
 - Try one tool:
     - [BMAD](https://github.com/bmad-code-org/BMAD-METHOD/tree/main). Tip: start with the quickest possible flow.
-    - Try [Antigravity](https://antigravity.google/).
-    - Try [GitHub SpecKit](https://github.com/github/spec-kit)
+    - [Antigravity](https://antigravity.google/).
+    - [GitHub SpecKit](https://github.com/github/spec-kit)

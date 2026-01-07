@@ -1,7 +1,7 @@
 # Context Engineering
 
 ## Demo
-- Excercise: "change x". Atlas add REST API.
+- Exercise: "change x". Atlas add REST API.
 	- no info.
 	- 87 page doco.
 
