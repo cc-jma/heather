@@ -13,6 +13,7 @@ This is a collection of inspirational ideas to get you thinking of what might he
 
 ## GitHub OSS interaction
 - Let the agent interact with GitHub / GitLab for you. [Authentication tips](https://github.com/fletchgqc/agentbox?tab=readme-ov-file#authenticating-to-git-or-other-scc-providers).
+- Example of inline code review: https://github.com/fletchgqc/agentbox/pull/43
 
 ## Pipeline-fixer
 Sick of waiting for pipelines to fail and put error into LLM? Prompt successfully used by Christoph Muth.
@@ -47,9 +48,9 @@ Sick of waiting for pipelines to fail and put error into LLM? Prompt successfull
     - Keywords like: simple, lean, YAGNI
 - Workslop and shift-right.
 
-## Brainstorming ideas
-- Throwaway code (Felix's change to Agentbox - prompts to allow us to produce own extensions).
-- Who needs POs? Why not just let the LLM create issues based on metrics?
+## Throwaway Code
+- Agentbox-supplied plan to add your own features.
+- Throwing away code feels wron. Discard and try again.
 
 ## Reading
 - https://code.claude.com/docs/en/common-workflows
