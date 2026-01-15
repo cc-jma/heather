@@ -44,12 +44,17 @@ Sick of approving permission dialogs? Always give the Agent full permissions. Ha
 
 ## Voice Coding
 - 3x faster input.
-- Tools (mac-focused)
-	- https://wisprflow.ai/ - premium, works well, recordings go to cloud
-	- superwhisper - established solution, works quite well
-	- https://goodsnooze.gumroad.com/l/macwhisper - recommended by Jannis M. Also for recording meetings. Can use with local LLM or cloud.
-	- https://tryvoiceink.com/ - some recommendations. Local LLM or cloud.
-	- VSCode speech https://code.visualstudio.com/docs/configure/accessibility/voice
+- Tools. Simple solution for Mac: MacWhisper, Windows: SuperWhisper.
+
+| Tool | Platform | Local LLM support | Cloud LLM support | Record meetings | Multi-key shortcuts | Freemium | One-off purchase for pro | Open source |
+|------|----------|------------------|-------------------|-----------------|---------------------|----------|--------------------------|-------------|
+| [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper) | Mac | Yes | Yes | Yes | Yes | Yes | Yes | No |
+| [VoiceInk](https://tryvoiceink.com/) | Mac, Windows, iOS | Yes | Yes | Yes | No | Yes | Yes | Yes |
+| [SuperWhisper](https://superwhisper.com/) | Mac, Windows, iOS | Yes | Yes | Yes | Yes | Yes | No | No |
+| [WisprFlow](https://wisprflow.ai/) | Mac, Windows, iOS | No | Yes | ? | Yes | Yes | No | No |
+| [VSCode Speech](https://code.visualstudio.com/docs/configure/accessibility/voice) | Mac, Windows, Linux | Yes | No | No | Yes | Free | Free | Yes |
+
+
 - Voice coding best practices https://addyo.substack.com/p/speech-to-code-vibe-coding-with-voice
 - Skill-building practice:
 	- "Reduce, don't increase." It's hard to get into the habit of using it, so always:
