@@ -90,7 +90,7 @@ for domain in "repo.maven.apache.org" "repo1.maven.org"; do
         fi
         network=$(get_network_range "$ip" 24)
         echo "Adding network $network for $domain"
-        ipset add allowed-domains "$network"
+        ipset add allowed-domains "$network" -exist
     done < <(echo "$ips")
 done
 
